@@ -354,13 +354,13 @@ generic_BLING.o: $(SRCROOT)ocean_shared/generic_tracers/generic_BLING.F90 generi
 generic_CFC.o: $(SRCROOT)ocean_shared/generic_tracers/generic_CFC.F90 generic_tracer_utils.o
 	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_CFC.F90
 generic_COBALT.o: $(SRCROOT)ocean_shared/generic_tracers/generic_COBALT.F90 generic_tracer_utils.o FMS_ocmip2_co2calc.o
-	$(FC) $(CPPDEFS) $(FPPFLAGS) $(COBALT) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_COBALT.F90
+	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(COBALT) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_COBALT.F90
 generic_ERGOM.o: $(SRCROOT)ocean_shared/generic_tracers/generic_ERGOM.F90 generic_tracer_utils.o
 	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_ERGOM.F90
 generic_SF6.o: $(SRCROOT)ocean_shared/generic_tracers/generic_SF6.F90 generic_tracer_utils.o
 	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_SF6.F90
 generic_TOPAZ.o: $(SRCROOT)ocean_shared/generic_tracers/generic_TOPAZ.F90 generic_tracer_utils.o FMS_ocmip2_co2calc.o
-	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_TOPAZ.F90
+	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(OTHERFLAGS) $(OTHER_FFLAGS) -ffixed-line-length-200 -fallow-argument-mismatch -c $(SRCROOT)ocean_shared/generic_tracers/generic_TOPAZ.F90
 generic_abiotic.o: $(SRCROOT)ocean_shared/generic_tracers/generic_abiotic.F90 generic_tracer_utils.o FMS_ocmip2_co2calc.o
 	$(FC) $(CPPDEFS) $(FPPFLAGS) $(FFLAGS) $(OTHERFLAGS) $(OTHER_FFLAGS) -c	$(SRCROOT)ocean_shared/generic_tracers/generic_abiotic.F90
 generic_age.o: $(SRCROOT)ocean_shared/generic_tracers/generic_age.F90 generic_tracer_utils.o
