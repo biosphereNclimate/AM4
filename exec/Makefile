@@ -1,14 +1,17 @@
-# Makefile for Experiment 'cm4p12_xanadu_2021.01'
+# Makefile for Oscar
 
 BUILDROOT = $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
 SRCROOT = $(abspath $(BUILDROOT)../src)/ # Final '/' added to denote directory
 
 # Select the make template (default is intel)
-ifeq ($(gcc),on)
-  MK_TEMPLATE = $(BUILDROOT)templates/gnu.mk
-else
-  MK_TEMPLATE = $(BUILDROOT)templates/intel.mk
-endif
+#PSH Begin
+#ifeq ($(gcc),on)
+#  MK_TEMPLATE = $(BUILDROOT)templates/gnu.mk
+#else
+#  MK_TEMPLATE = $(BUILDROOT)templates/intel.mk
+#endif
+MK_TEMPLATE = $(BUILDROOT)templates/oscar.gnu.mk
+#PSH End
 # Set shell to sh
 ifeq ($(SH),sh)
   SHELL=/bin/sh
@@ -24,7 +27,7 @@ include $(MK_TEMPLATE)
 
 SUBMAKEFLAGS = BUILDROOT=$(BUILDROOT) SRCROOT=$(SRCROOT) MK_TEMPLATE=$(MK_TEMPLATE) BLD_TYPE=$(BLD_TYPE)
 
-am4_xanadu_2021.03.x: coupler/libcoupler.a atmos_dyn/libatmos_dyn.a ice_sis/libice_sis.a atmos_cubed_sphere/libatmos_cubed_sphere.a atmos_phys/libatmos_phys.a mom6/libmom6.a land_lad2/libland_lad2.a fms/build/libFMS/.libs/libFMS.a
+am4.x: coupler/libcoupler.a atmos_dyn/libatmos_dyn.a ice_sis/libice_sis.a atmos_cubed_sphere/libatmos_cubed_sphere.a atmos_phys/libatmos_phys.a mom6/libmom6.a land_lad2/libland_lad2.a fms/build/libFMS/.libs/libFMS.a
 	$(LD) $^ $(LDFLAGS) -o $@ $(STATIC_LIBS)
 
 fms/build/libFMS/.libs/libFMS.a:  FORCE
