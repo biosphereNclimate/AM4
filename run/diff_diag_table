@@ -1,0 +1,40 @@
+229,238d228
+< "radiation", "swup_toa_ad_clr",                "swup_toa_ad_clr", "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "swdn_sfc_ad_clr",                "swdn_sfc_ad_clr", "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "swup_sfc_ad_clr",                "swup_sfc_ad_clr", "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "lwsfc_ad_clr",                   "lwsfc_ad_clr",    "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "lwtoa_ad_clr",                   "lwtoa_ad_clr",    "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "swup_toa_ad",                    "swup_toa_ad",     "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "swdn_sfc_ad",                    "swdn_sfc_ad",     "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "swup_sfc_ad",                    "swup_sfc_ad",     "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "lwsfc_ad",                       "lwsfc_ad",        "atmos_month",     "all", .true.,  "none", 2
+< "radiation", "lwtoa_ad",                       "lwtoa_ad",        "atmos_month",     "all", .true.,  "none", 2 
+332,335d321
+< "moist", "wetso4",                "wetso4",               "atmos_tracer", "all", .true., "none", 2
+< "moist", "simpleSO4_wet_depo",    "simpleSO4_wet_dep",    "atmos_tracer", "all", .true., "none", 2
+< "moist", "simpleSO4_wet_depo_uw", "simpleSO4_wet_dep_uw", "atmos_tracer", "all", .true., "none", 2
+< "moist", "simpleSO4_wetdep",      "simpleSO4_wetdep",     "atmos_tracer", "all", .true., "none", 2
+338d323
+< "land_static_sg",  -1,  "months", 1, "days", "time"
+364c349
+< "land_sg", "cell_area",  "cell_area",  "land_static_sg", "all", .false., "none", 2
+---
+> "land",    "cell_area",  "cell_area",  "land_static", "all", .false., "none", 2
+461c446
+< "soil",    "asoil",      "asoil",      "land_month",  "all", .true., "none", 2
+---
+> "vegn",    "asoil",      "asoil",      "land_month",  "all", .true., "none", 2
+467c452
+< "soil",    "fsc",        "fsc",        "land_month",  "all", .true., "none", 2
+---
+> "vegn",    "fsc",        "fsc",        "land_month",  "all", .true., "none", 2
+477,478c462,463
+< "soil",    "rsoil",      "rsoil",      "land_month",  "all", .true., "none", 2
+< "soil",    "rsoil_fast", "rsoil_fast", "land_month",  "all", .true., "none", 2
+---
+> "vegn",    "rsoil",      "rsoil",      "land_month",  "all", .true., "none", 2
+> "vegn",    "rsoil_fast", "rsoil_fast", "land_month",  "all", .true., "none", 2
+481c466
+< "soil",    "ssc",        "ssc",        "land_month",  "all", .true., "none", 2
+---
+> "vegn",    "ssc",        "ssc",        "land_month",  "all", .true., "none", 2

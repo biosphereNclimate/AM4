@@ -1,0 +1,11 @@
+501c501
+<         atmos_nthreads = 1
+---
+>         atmos_nthreads = 2
+502a503
+>         ncores_per_node = 36
+1409a1411
+>       photosynthesis_to_use = 'leuning'
+1410a1413,1414
+>       co2_to_use_for_photosynthesis ='interactive'
+>       co2_for_photosynthesis = 286.0e-6
